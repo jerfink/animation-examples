@@ -1,0 +1,87 @@
+@import "partials/transitions";
+@import "partials/keyframes";
+
+
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+body { 
+    background: #ddd;
+    height: 100%;
+}
+
+.demo_box {
+    font-size: 3rem;
+    padding: 2rem 4rem;
+    text-align: center;
+    text-transform: uppercase;
+    position: relative;
+}
+
+
+/* Fadein Demo */
+.fadein_demo {
+    background: #A5AE9E;
+    color: #fff;
+    opacity: 0;
+
+    animation: fade-in .5s 1s ease-in forwards;
+}
+
+
+/* Draw Demo */
+.draw_demo {
+    overflow: hidden;
+    color: #fff;
+
+    &:before {
+        animation: show-background 1s .5s ease-in forwards;
+        background-color: #7C9082;
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        transform: translate(-110%, 95%);
+    }
+
+    span {
+        animation: pop-in .5s 1.4s cubic-bezier(0, .8, .4, 1.25) forwards;
+        display: inline-block;
+        transform: scale(1);
+        opacity: 0;
+    }
+
+    .text-part-2 {
+        animation-delay: 1.6s;
+
+        &.fa {  
+            vertical-align: middle;
+            padding-left: 10px;
+        }
+
+    }
+}
+
+
+/* 3D Demo */
+.center_me {
+    perspective: 800px;
+    transform-style: preserve3d;
+}
+
+.threedee_demo {
+    animation: no-transform 1s .5s cubic-bezier(0, .1, .5, 1.5) forwards;
+    background-color: #7E846B;
+    color: #fff;
+    transform: rotateX(-90deg);
+}
+
+
+
+
+
+

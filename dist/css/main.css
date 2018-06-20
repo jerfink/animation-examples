@@ -1,0 +1,221 @@
+.transition_demo {
+  background-color: #D0DDD7;
+  border: 10px solid #7E846B;
+  border-radius: 5px;
+  color: #f5f5f5;
+  cursor: pointer;
+  overflow: hidden;
+  position: relative;
+  width: 20rem;
+  height: 10rem;
+  max-width: 100%;
+}
+
+.demo-letter {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transition: -webkit-transform .4s ease-out;
+  transition: -webkit-transform .4s ease-out;
+  transition: transform .4s ease-out;
+  transition: transform .4s ease-out, -webkit-transform .4s ease-out;
+}
+
+.demo-letter1 {
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.demo-letter2 {
+  -webkit-transform: translate(-50%, 200%);
+          transform: translate(-50%, 200%);
+}
+
+.transition_demo:hover .demo-letter1 {
+  -webkit-transform: translate(-50%, 200%);
+          transform: translate(-50%, 200%);
+}
+
+.transition_demo:hover .demo-letter2 {
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+@-webkit-keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes show-background {
+  0% {
+    -webkit-transform: translate(-110%, 95%);
+            transform: translate(-110%, 95%);
+  }
+  50% {
+    -webkit-transform: translate(0, 95%);
+            transform: translate(0, 95%);
+  }
+  100% {
+    -webkit-transform: none;
+            transform: none;
+  }
+}
+
+@keyframes show-background {
+  0% {
+    -webkit-transform: translate(-110%, 95%);
+            transform: translate(-110%, 95%);
+  }
+  50% {
+    -webkit-transform: translate(0, 95%);
+            transform: translate(0, 95%);
+  }
+  100% {
+    -webkit-transform: none;
+            transform: none;
+  }
+}
+
+@-webkit-keyframes pop-in {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+  }
+  40% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes pop-in {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+  }
+  40% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@-webkit-keyframes no-transform {
+  100% {
+    -webkit-transform: none;
+            transform: none;
+  }
+}
+
+@keyframes no-transform {
+  100% {
+    -webkit-transform: none;
+            transform: none;
+  }
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  background: #ddd;
+  height: 100%;
+}
+
+.demo_box {
+  font-size: 3rem;
+  padding: 2rem 4rem;
+  text-align: center;
+  text-transform: uppercase;
+  position: relative;
+}
+
+/* Fadein Demo */
+.fadein_demo {
+  background: #A5AE9E;
+  color: #fff;
+  opacity: 0;
+  -webkit-animation: fade-in .5s 1s ease-in forwards;
+          animation: fade-in .5s 1s ease-in forwards;
+}
+
+/* Draw Demo */
+.draw_demo {
+  overflow: hidden;
+  color: #fff;
+}
+
+.draw_demo:before {
+  -webkit-animation: show-background 1s .5s ease-in forwards;
+          animation: show-background 1s .5s ease-in forwards;
+  background-color: #7C9082;
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  -webkit-transform: translate(-110%, 95%);
+          transform: translate(-110%, 95%);
+}
+
+.draw_demo span {
+  -webkit-animation: pop-in 0.5s 1.4s cubic-bezier(0, 0.8, 0.4, 1.25) forwards;
+          animation: pop-in 0.5s 1.4s cubic-bezier(0, 0.8, 0.4, 1.25) forwards;
+  display: inline-block;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  opacity: 0;
+}
+
+.draw_demo .text-part-2 {
+  -webkit-animation-delay: 1.6s;
+          animation-delay: 1.6s;
+}
+
+.draw_demo .text-part-2.fa {
+  vertical-align: middle;
+  padding-left: 10px;
+}
+
+/* 3D Demo */
+.center_me {
+  -webkit-perspective: 800px;
+          perspective: 800px;
+  -webkit-transform-style: preserve3d;
+          transform-style: preserve3d;
+}
+
+.threedee_demo {
+  -webkit-animation: no-transform 1s 0.5s cubic-bezier(0, 0.1, 0.5, 1.5) forwards;
+          animation: no-transform 1s 0.5s cubic-bezier(0, 0.1, 0.5, 1.5) forwards;
+  background-color: #7E846B;
+  color: #fff;
+  -webkit-transform: rotateX(-90deg);
+          transform: rotateX(-90deg);
+}
+
+/*# sourceMappingURL=maps/main.css.map */
