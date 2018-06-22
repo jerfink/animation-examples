@@ -1,7 +1,7 @@
 {
   "name": "css",
   "version": "1.0.0",
-  "description": "",
+  "description": "Some CSS animations",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Errot: no test specified\" && exit 1"
@@ -16,5 +16,13 @@
     "gulp-sourcemaps": "^2.6.0"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jerfink/animation-examples.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jerfink/animation-examples/issues"
+  },
+  "homepage": "https://github.com/jerfink/animation-examples#readme"
 }
